@@ -6,6 +6,7 @@ body {
     padding: 0;
     width: 100%;
     box-sizing: border-box;
+    overflow-x: hidden; 
 }
 p {
     margin-top: 0;
@@ -25,6 +26,18 @@ p {
 #scrollToTopBtn img {
     width: 100%;
     height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    padding: 20px;
+    width: 100%;
+}
+h2 {
+    margin: 0 auto;
 }
 
 
@@ -80,49 +93,70 @@ p {
     color: #F9BFBF;
 }
 /* Hamburger menu style! */
-#menu-button {
-    display: none;
+.header-area{
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    padding: 0 20px;
+    align-items: center;
 }
-.gnav-sp-wrap {
-    display: none;
+.hamburger{
+    width: 40px;
+    height: 25px;
+    position: relative;
+    transition: .5s;
 }
+.hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #434343;
+    transition: .5s;
+}
+.hamburger span:first-of-type{/* ハンバーガーメニューの1番目の線 */
+    top: 0;
+}
+  .hamburger span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+    top: 50%;
+}
+  .hamburger span:last-of-type{/* ハンバーガーメニューの3番目の線 */
+    top: 100%;
+}
+.slide-menu{
+    background-color: rgba(27, 27, 27, 0.8);
+    position: fixed;
+    top: 65px;
+    width: 100%;
+    left: 0;
+    transform: translateX(100%); 
+    transition: .5s;
+}
+.slide-menu li{
+    color: #fff;
+    line-height: 400%;
+    text-align: center;
+}
+.hamburger.active{/* 追記 */
+    transform: rotateY(360deg);/* 追記 */
+}
+.hamburger.active span:first-of-type{/* ハンバーガーメニューの1番目の線 */
+    top: 50%;
+    transform: rotate(45deg);
+}
+.hamburger.active span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+    opacity: 0;/* 透明にする */
+}
+.hamburger.active span:last-of-type{/* ハンバーガーメニューの3番目の線 */
+top: 50%;
+transform: rotate(-45deg);
+}
+.slide-menu.active{
+transform: translateX(0);
+}
+
 /* Styled for SP */
 @media (max-width: 768px) {
-    #menu-button {
-        display: block;
-        cursor: pointer;
-    }
-    .menu-button-inner span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        background-color: #434343;
-    }
-    .gnav-sp-wrap {
-        display: none; /* デフォルトは非表示 */
-        flex-direction: column;
-        align-items: center;
-        background-color: #F9BFBF;
-        position: absolute;
-        top: 60px;
-        width: 100%;
-        z-index: 1000;
-    }
-    ul.gnav-sp li {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    ul.gnav-sp li a {
-        font-size: 20px;
-        letter-spacing: 0.1em;
-        color: #434343;
-        font-weight: bold;
-    }
     .gnav-pc-wrap {
-        display: none;
-    }
-    .gnav-sp {
         display: none;
     }
 }
@@ -296,15 +330,21 @@ p {
 #skills {
     text-align: center; 
     color: #f6f6f6;
+    width: 100%;
 }
 .skills-content {
     background-color: #F9BFBF;
     padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .section-title {
     font-size: 70px;
     font-weight: bold; 
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 .skills-list {
     display: flex;
@@ -319,7 +359,6 @@ p {
     width: calc(33.33% - 40px);
     margin: 10px;
     padding: 10px 0;
-    text-align: left;
 }
 .skills-block img {
     margin: 0 auto 10px; 
@@ -345,12 +384,18 @@ p {
 
 /* Career section! */
 #career {
+    width: 100%;
     text-align: center; 
     color: #f6f6f6;
 }
 .career-content {
     background-color: #F9BFBF;
     padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .careers-list {
     color: #000000;
@@ -380,17 +425,26 @@ p {
     .industry {
         font-size: 15px;
     }
+    .careers-list {
+        padding: 0 20px;
+    }
 }
 
 
 /* Works section! */
 #works {
+    width: 100%;
     text-align: center; 
     color: #f6f6f6;
 }
 .works-content {
     background-color: #F9BFBF;
     padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .works-list {
     color: #000000;
@@ -435,12 +489,18 @@ p {
 
 /* Contact section! */
 #contact {
+    width: 100%;
     text-align: center; 
     color: #f6f6f6;
 }
 .contact-content {
     background-color: #F9BFBF;
     padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .google-form {
     padding: 150px 0 0 0;
@@ -583,9 +643,11 @@ p {
     background-color: #f6f6f6;
     border: none;
     padding: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 #scrollToTopBtn img {
     width: 100%;
     height: auto;
 }
-

@@ -5,11 +5,7 @@ function scrollToTop() {
     });
 }
 
-document.getElementById('menu-button').addEventListener('click', function() {
-    var menu = document.getElementById('mobile-menu');
-    if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'flex';
-    }
-});
+document.querySelector('.hamburger').addEventListener('click', function(){
+    this.classList.toggle('active');
+    document.querySelector('.slide-menu').classList.toggle('active');
+})

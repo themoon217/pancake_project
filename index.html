@@ -13,26 +13,8 @@
 				<p class="logo-number">217</p>
 				<p class="logo-text">Super rookie<br>Programmer!</p>
 			</div>
-			<div>
-				<nav class="gnav-pc-wrap">
-					<ul id="gnav-pc">
-						<li><a href="#home">Home</a></li>
-						<li><a href="#skills">Skills</a></li>
-						<li><a href="#career">Career</a></li>
-						<li><a href="#works">Works</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div id="menu-button" >
-                <div class="menu-button-inner">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-			<nav class="gnav-sp-wrap">
-				<ul class="gnav-sp">
+			<nav class="gnav-pc-wrap">
+				<ul id="gnav-pc">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#skills">Skills</a></li>
 					<li><a href="#career">Career</a></li>
@@ -40,6 +22,20 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
+			<div class="header-area">
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<ul class="slide-menu">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#career">Career</a></li>
+				<li><a href="#works">Works</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
 		</header>
 		<div id="home">
 			<p class="modest-text">Hello people!</p>
@@ -56,7 +52,7 @@
 						<p>nice to meet you</p>
 					</div>
 					<div class="text-block block2">
-						<p>Mitsuyo Kono <br>神野 充代<br>Web Engineer</p>
+						<p>Mitsuyo Kono<br>Web Engineer</p>
 					</div>
 					<div class="text-block block3">
 						<p>I'm a very newbie programmer. <br>
@@ -76,7 +72,7 @@
 		</div>
 		<section id="skills">
 			<div class="skills-content">
-				<h2 class="section-title">Skills</h2>
+				<p class="section-title">Skills</p>
 			</div>
 			<div class="skills-list">
 				<div class="skills-block">
@@ -137,7 +133,7 @@
 		</section>
 		<section id="career">
 			<div class="career-content">
-				<h2 class="section-title">Career</h2>
+				<p class="section-title">Career</p>
 			</div>
 			<div class="careers-list">
 				<div class="careers-block">
@@ -158,13 +154,13 @@
 				</div>
 				<div class="careers-block">
 					<p class="year">2012</p>
-					<p class="industry">株式会社 良品計画 無印良品アトレ目黒・岐阜高島屋 販売促進部門</p>
+					<p class="industry">無印良品 アトレ目黒・岐阜高島屋 販売促進部門</p>
 				</div>
 			</div>
 		</section>
 		<section id="works">
 			<div class="works-content">
-				<h2 class="section-title">Works</h2>
+				<p class="section-title">Works</p>
 			</div>
 			<div class="works-list">
 				<div class="works-block">
@@ -172,18 +168,18 @@
 					<p class="app-contents">画像をテキストで一気に移動させるアプリです。</p>
 				</div>
 				<div class="works-block">
-					<a href=""><p class="app-name">yorushika_gacha</p></a>
-					<p class="app-contents">ヨルシカの曲名が表示されるゲームです。</p>
+					<a href=""><p class="app-name">yorushika_clatter</p></a>
+					<p class="app-contents">ヨルシカ全曲から1回または10回ランダムに曲を選ぶガチャアプリです。</p>
 				</div>
 				<div class="works-block">
 					<a href=""><p class="app-name">typing_games</p></a>
-					<p class="app-contents">ヨルシカの歌詞で制限時間有りのタイピングゲームです。</p>
+					<p class="app-contents">ヨルシカの曲の歌詞を使ったタイピング練習アプリです。</p>
 				</div>
 			</div>
 		</section>	
 		<section id="contact">
 			<div class="contact-content">
-				<h2 class="section-title">Contact</h2>
+				<p class="section-title">Contact</p>
 			</div>
 			<div class="google-form">
 			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSev2SRUdu0mAectQm8DjoqToH42SAiTBr41ZY8FOXrNxKKQrw/viewform?usp=sf_link" width="1000" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
@@ -232,5 +228,6 @@
 		<button onclick="scrollToTop()" id="scrollToTopBtn">
 			<img src="image/arrow-top.svg" alt="Arrow Top">
 		</button>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	</body>
 </html>

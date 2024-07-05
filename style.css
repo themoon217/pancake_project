@@ -39,8 +39,35 @@ section {
 h2 {
     margin: 0 auto;
 }
-
-
+.section-title {
+    font-size: 70px;
+    font-weight: bold; 
+    /*text-decoration: underline;*/
+}
+.section-content {
+    color: #f6f6f6;
+    background-color: #F9BFBF;
+    padding: 272px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.br-sp {
+    display: none;
+}
+@media(max-width: 768px) {
+    .section-title {
+        font-size: 65px;
+    }
+    .section-content {
+        padding: 127px 0;
+    }
+    .br-sp {
+        display: block;
+    }
+}
 /* Header section! */
 #header {
     top: 0;
@@ -99,7 +126,6 @@ h2 {
 .slide-menu {
     display: none;
 }
-
 /* Styled for SP */
 @media (max-width: 768px) {
     .gnav-pc-wrap {
@@ -153,6 +179,7 @@ h2 {
         left: 0;
         transform: translateX(100%); 
         transition: .5s;
+        z-index: 2
     }
     .slide-menu li a {
         text-decoration: none;
@@ -167,11 +194,10 @@ h2 {
     .slide-menu a:hover {
         color: #434343;
     }    
-    .slide-menu.active{
+    .slide-menu.active {
         transform: translateX(0); 
     }
 }
-
 /* Home section! */
 #home {
     padding: 100px 0 50px 0;
@@ -197,7 +223,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    margin: 0 0 100px 0;
     width: 40px;
     height: 40px;
     transition: 0.3s;
@@ -229,18 +255,17 @@ h2 {
         left: 27px;
     }
     .large-text {
-        font-size: 56px; /* 適切なサイズに調整 */
-        margin-top: 40px; /* 必要に応じてマージンも調整 */
-        margin-bottom: 70px; /* 必要に応じてマージンも調整 */
+        font-size: 56px;
+        margin-top: 40px; 
+        margin-bottom: 70px;
+    }
+    .social-icons {
+        margin: 0 auto;
     }
 }
-
-
 /* content!! */
 .content {
-    display: flex;
-    padding: 50px 0 0 0;
-    margin: 100px 0 0 0;
+    margin: 75px 0 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -249,6 +274,7 @@ h2 {
     flex-direction: column; 
     align-items: flex-start;
     padding: 0px;
+    margin: 0 20px;
 }
 .text-block {
     width: 100%;
@@ -258,48 +284,48 @@ h2 {
 .block1 {
     font-weight: 400;
     font-size: 20px;
-    margin: 20px;
+    margin: 20px 0;
 }
 .block2 {
     font-weight: bold;
     font-size: 27px;
-    margin: 0 0 20px 20px;
+    margin: 20px 0;
 }
 .block3 {
     font-weight: bold;
     font-size: 27px;
-    margin: 0 0 20px 20px;
+    margin: 20px 0;
 }
 .image-block {
-    box-sizing: border-box;
-    text-align: center; 
+    margin: 0 50px;
 }
 .image-block img {
     max-width: 80%;
 }
+.btn-block {
+    text-align: center;
+}
 /* Button Style! */
 .btn-primary {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 20px 50px;
     background-color: #727272;
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 50px;
     transition: background-color 0.3s;
-    margin: 20px;
+    margin: 40px 0;
 }
 .btn-primary:hover {
     background-color: #434343;
 }
 /* Styled for SP */
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .content {
-        display: flex;
         flex-direction: column; 
-        align-items: center;
         padding: 0;
-        margin: 100px 0;
+        margin-top: 100px;
     }
     .content-wrapper {
         text-align: center; 
@@ -310,12 +336,9 @@ h2 {
         margin: 10px 0;
     }
     .block1 {
-        font-weight: 400;
-        font-size: 20px;
         text-align: center;
     }
     .block2 {
-        font-weight: bold;
         font-size: 30px;
         text-align: center;
         margin: 100px 0;
@@ -334,27 +357,9 @@ h2 {
         height: auto;
     }
 }
-
-
 /* Skills section! */
 #skills {
-    text-align: center; 
-    color: #f6f6f6;
-    width: 100%;
-}
-.skills-content {
-    background-color: #F9BFBF;
-    padding: 272px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-}
-.section-title {
-    font-size: 70px;
-    font-weight: bold; 
-    text-decoration: underline;
 }
 .skills-list {
     display: flex;
@@ -363,12 +368,11 @@ h2 {
     background-color: #f6f6f6;
     color: #000000;
     margin: 50px auto;
-    max-width: 800px;
+    font-size: 17px;
 }
 .skills-block {
     width: calc(33.33% - 40px);
-    margin: 10px;
-    padding: 10px 0;
+    margin: 40px 0;
 }
 .skills-block img {
     margin: 0 auto 10px; 
@@ -377,45 +381,39 @@ h2 {
 .skills-block p {
     margin: 5px 0;
 }
-@media (max-width: 768px){
-    .skills-content {
-        background-color: #F9BFBF;
-        padding: 120px;
-    }
+.language {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+.star {
+    color: #727272;
+    font-size: 20px;
+    padding: 10px;
+}
+@media (max-width: 768px) {
     .skills-list {
-        margin: 100px 20px;
+        margin: 100px 0;
     }
     .skills-block {
         width: calc(50% - 40px);
-        margin: 5px;
+        margin: 20px 5px;
+        padding: 20px;
+    }
+    .language {
+        font-size: 24px;
     }
 }
-
-
 /* Career section! */
-#career {
-    width: 100%;
-    text-align: center; 
-    color: #f6f6f6;
-}
-.career-content {
-    background-color: #F9BFBF;
-    padding: 272px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 .careers-list {
     color: #000000;
-    padding: 30px 0;
+    padding: 50px 0;
     text-align: left;
     margin: 0 auto;
     max-width: 800px;
 }
 .careers-block {
-    padding: 20px 0;
+    padding: 40px 0;
     border-bottom: 1px solid #dddddd;
 }
 .year {
@@ -423,8 +421,13 @@ h2 {
     font-size: 30px;
     padding: 10px;
 }
-.industry {
+.school {
+    font-weight: bold;
     font-size: 20px;
+    padding: 10px;
+}
+.acquisition {
+    font-size: 17px;
     padding: 10px;
 }
 @media (max-width: 768px){
@@ -432,39 +435,20 @@ h2 {
         background-color: #F9BFBF;
         padding: 120px;
     }
-    .industry {
-        font-size: 15px;
-    }
     .careers-list {
-        padding: 0 20px;
+        padding: 20px;
     }
 }
-
-
 /* Works section! */
-#works {
-    width: 100%;
-    text-align: center; 
-    color: #f6f6f6;
-}
-.works-content {
-    background-color: #F9BFBF;
-    padding: 272px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 .works-list {
     color: #000000;
-    padding: 30px 0;
+    padding: 50px 0;
     text-align: left;
     margin: 0 auto;
     max-width: 800px;
 }
 .works-block {
-    padding: 20px 0;
+    margin-top: 60px;
     border-bottom: 1px solid #dddddd;
 }
 .app-name {
@@ -485,7 +469,7 @@ h2 {
 .works-block a:hover {
     color: #F9BFBF;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .works-content {
         background-color: #F9BFBF;
         padding: 120px;
@@ -494,26 +478,12 @@ h2 {
         text-align: center;
     }
 }
-
-
-
 /* Contact section! */
 #contact {
-    width: 100%;
-    text-align: center; 
-    color: #f6f6f6;
-}
-.contact-content {
-    background-color: #F9BFBF;
-    padding: 272px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 .google-form {
-    padding: 150px 0 0 0;
+    padding: 80px 0 0 0;
     width: 100%;
     margin: 0 auto;
 }
@@ -532,9 +502,9 @@ h2 {
     font-size: 124px;
     font-weight: bold;
     color: #000000;
-    margin-bottom: 20px;
+    margin: 70px 0;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .contact-content {
         background-color: #F9BFBF;
         padding: 120px;
@@ -547,15 +517,15 @@ h2 {
     }
     .large-text2 {
         font-size: 70px;
+        text-align: center;
+        margin: 30px 0;
     }
 }
-@media (max-width: 480px){
+@media (max-width: 480px) {
     .google-form iframe{
         height: 400px;
     }
 }
-
-
 /* Footer section! */
 .footer-logo {
     display: flex;
@@ -574,7 +544,7 @@ h2 {
     line-height: 1.3;
 }
 #footer {
-    padding: 40px 40px 100px 40px;
+    padding: 50px 40px 100px 40px;
 }
 .footer-massage {
     display: flex;
@@ -604,7 +574,10 @@ h2 {
 .mobile-footer-text1, .mobile-footer-logo {
     display: none;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
+    #footer {
+        padding: 0 40px 100px 40px;
+    }
     .footer-logo, .footer-logo-number, .footer-logo-text, .footer-text1 {
         display: none;
     }
@@ -646,8 +619,6 @@ h2 {
     }
     
 }
-
-
 /* scrollToTopBtn! */
 #scrollToTopBtn {
     background-color: #f6f6f6;

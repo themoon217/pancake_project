@@ -1,4 +1,4 @@
-/* Styled for PC! */
+/* All styled for PC! */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f6f6f6;
@@ -93,65 +93,11 @@ h2 {
     color: #F9BFBF;
 }
 /* Hamburger menu style! */
-.header-area{
-    display: flex;
-    justify-content: space-between;
-    height: 65px;
-    padding: 0 20px;
-    align-items: center;
+.hamburger {
+    display: none;
 }
-.hamburger{
-    width: 40px;
-    height: 25px;
-    position: relative;
-    transition: .5s;
-}
-.hamburger span {
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: #434343;
-    transition: .5s;
-}
-.hamburger span:first-of-type{/* ハンバーガーメニューの1番目の線 */
-    top: 0;
-}
-  .hamburger span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
-    top: 50%;
-}
-  .hamburger span:last-of-type{/* ハンバーガーメニューの3番目の線 */
-    top: 100%;
-}
-.slide-menu{
-    background-color: rgba(27, 27, 27, 0.8);
-    position: fixed;
-    top: 65px;
-    width: 100%;
-    left: 0;
-    transform: translateX(100%); 
-    transition: .5s;
-}
-.slide-menu li{
-    color: #fff;
-    line-height: 400%;
-    text-align: center;
-}
-.hamburger.active{/* 追記 */
-    transform: rotateY(360deg);/* 追記 */
-}
-.hamburger.active span:first-of-type{/* ハンバーガーメニューの1番目の線 */
-    top: 50%;
-    transform: rotate(45deg);
-}
-.hamburger.active span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
-    opacity: 0;/* 透明にする */
-}
-.hamburger.active span:last-of-type{/* ハンバーガーメニューの3番目の線 */
-top: 50%;
-transform: rotate(-45deg);
-}
-.slide-menu.active{
-transform: translateX(0);
+.slide-menu {
+    display: none;
 }
 
 /* Styled for SP */
@@ -159,8 +105,72 @@ transform: translateX(0);
     .gnav-pc-wrap {
         display: none;
     }
+    .hamburger {
+        width: 33px;
+        height: 47px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        cursor: pointer;
+        z-index: 10;
+    } 
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #434343;
+        transition: .5s;
+    }
+    .hamburger span:first-of-type {
+        top: 0;
+    }
+    .hamburger span:nth-of-type(2) {
+        top: 50%;
+    }
+    .hamburger span:last-of-type {
+        top: 100%;
+    }
+    .hamburger.active span:first-of-type {
+        transform: translateY(12px) rotate(45deg);
+    }
+    .hamburger.active span:nth-of-type(2) {
+        opacity: 0;/
+    }
+    .hamburger.active span:last-of-type {
+        transform: translateY(-12px) rotate(-45deg);
+    }
+    .slide-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F9BFBF;
+        position: fixed;
+        top: 65px;
+        width: 100%;
+        left: 0;
+        transform: translateX(100%); 
+        transition: .5s;
+    }
+    .slide-menu li a {
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 900;
+        color: #fff;
+        line-height: 400%;
+        text-align: center;
+        padding: 10px;
+        letter-spacing: 1px;
+    }
+    .slide-menu a:hover {
+        color: #434343;
+    }    
+    .slide-menu.active{
+        transform: translateX(0); 
+    }
 }
-
 
 /* Home section! */
 #home {
@@ -192,16 +202,16 @@ transform: translateX(0);
     height: 40px;
     transition: 0.3s;
 }
-#youtube-icon:hover {
+.youtube-icon:hover {
     content: url('image/youtube-hover.svg');
 }
-#instagram-icon:hover {
+.instagram-icon:hover {
     content: url('image/instagram-hover.svg');
 }
-#github-icon:hover {
+.github-icon:hover {
     content: url('image/github-hover.svg');
 }
-#x-icon:hover {
+.x-icon:hover {
     content: url('image/x-hover.svg');
 }
 .social-icons a {
@@ -334,7 +344,7 @@ transform: translateX(0);
 }
 .skills-content {
     background-color: #F9BFBF;
-    padding: 200px 0;
+    padding: 272px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -390,7 +400,7 @@ transform: translateX(0);
 }
 .career-content {
     background-color: #F9BFBF;
-    padding: 200px 0;
+    padding: 272px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -439,7 +449,7 @@ transform: translateX(0);
 }
 .works-content {
     background-color: #F9BFBF;
-    padding: 200px 0;
+    padding: 272px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -495,7 +505,7 @@ transform: translateX(0);
 }
 .contact-content {
     background-color: #F9BFBF;
-    padding: 200px 0;
+    padding: 272px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;

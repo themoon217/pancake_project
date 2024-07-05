@@ -398,10 +398,15 @@ h2 {
     .skills-block {
         width: calc(50% - 40px);
         margin: 20px 5px;
-        padding: 20px;
+        padding: 20px 0;
     }
     .language {
         font-size: 24px;
+        padding: 10px 0;
+    }
+    .skills-block p {
+        margin: 5px 0;
+        font-size: 20px;
     }
 }
 /* Career section! */

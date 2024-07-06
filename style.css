@@ -475,6 +475,9 @@ h2 {
 .works-block a:hover {
     color: #F9BFBF;
 }
+.great-people {
+    color: #939395;
+}
 @media (max-width: 768px) {
     .works-content {
         background-color: #F9BFBF;

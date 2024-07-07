@@ -460,7 +460,10 @@ h2 {
 .app-name {
     font-weight: bold;
     font-size: 30px;
-    padding: 10px 0;
+}
+.app-name2 {
+    font-weight: bold;
+    font-size: 30px;
 }
 .app-contents {
     font-size: 18px;
@@ -468,12 +471,18 @@ h2 {
     line-height: 3;
 }
 .works-block a {
+    color: #fff;
     display: inline-block; 
     text-decoration: none; 
-    color: inherit;
+    padding: 10px 30px;
+    background-color: #939395;
+    border-radius: 50px;
 }
 .works-block a:hover {
     color: #F9BFBF;
+}
+.app-name2:hover {
+    color: #FFF700;
 }
 .great-people {
     color: #939395;

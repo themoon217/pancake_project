@@ -458,10 +458,12 @@ h2 {
     border-bottom: 1px solid #dddddd;
 }
 .app-name {
+    color: #fff;
     font-weight: bold;
     font-size: 30px;
 }
 .app-name2 {
+    color: #fff;
     font-weight: bold;
     font-size: 30px;
 }
@@ -471,14 +473,13 @@ h2 {
     line-height: 3;
 }
 .works-block a {
-    color: #fff;
     display: inline-block; 
     text-decoration: none; 
     padding: 10px 30px;
     background-color: #939395;
     border-radius: 50px;
 }
-.works-block a:hover {
+.app-name:hover {
     color: #F9BFBF;
 }
 .app-name2:hover {
